@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324165149.660349:@value{	I"length:EFi±I"digest;
-F"%a7d5d42568dfa1e595df7334582cc8a1I"source;
-FI"±/* Global styles */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324852488.548804:@value{	I"length:EFi	I"digest;
+F"%7627dc05dc1dd5fa896d33218d8f6973I"source;
+FI"	/* Global styles */
 
 #store #notice {
         color: #000;
@@ -66,6 +66,49 @@ FI"±/* Global styles */
   background:   #f8b0f8;
 }
 
+/* START:mainlayout */
+/* Styles for main page */
+
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #141;
+}
+
+#main {
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: #141;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+/* END:mainlayout */
+
 /* An entry in the store catalog */
 
 #store  .entry {
@@ -114,4 +157,4 @@ FI"±/* Global styles */
 }
 ;
 FI"_version;
-F"%e62a66ffb7bb2b45633f25206a921270
+F"%31d37937c1926e8c76bb037f1817ba0f
