@@ -5320,3 +5320,1169 @@ Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatc
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-25 23:48:11 +0000
 Served asset /logo.png - 200 OK (86ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-12-25 23:55:42 +0000
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (27.0ms)
+Rendered products/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-25 23:55:42 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-25 23:55:42 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-25 23:55:42 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2011-12-25 23:58:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/store"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2011-12-26 00:01:29 +0000
+
+ActionController::RoutingError (No route matches [GET] "/store"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:01:37 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (136.0ms)
+Completed 500 Internal Server Error in 566ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: <p id="notice" ><%= notice %></p>
+    3: <% end %>
+    4: <h1>Your Pragmatic Catalog</h1>
+    5: <% @products.each do |product| %>
+    6: <div class="entry" >
+    7: <%= image_tag(product.image_url) %>
+    8: <h3><%= product.title %></h3>
+  app/views/store/index.html.erb:5:in `_app_views_store_index_html_erb___12332213_26392476'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:03:14 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 143ms (Views: 112.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:03:14 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:03:14 +0000
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:03:14 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:03:14 +0000
+Served asset /logo.png - 304 Not Modified (4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:03:27 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (631.0ms)
+Completed 200 OK in 685ms (Views: 680.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:03:28 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:03:28 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:03:28 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:03:28 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:03:59 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+ERROR: compiling _app_views_store_index_html_erb___12332213_30812700 RAISED E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:7: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_store_index_html_erb___12332213_30812700(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "store/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; if notice 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( notice );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('<% end %');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+E:/Ruby193/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__1059082215__process_action__212950138__callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+E:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+E:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+E:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Rendered store/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:7: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: <%= notice %>
+    4: <% end %
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:04:31 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 80ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:04:31 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:04:31 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:04:32 +0000
+Served asset /depot.css - 200 OK (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:04:32 +0000
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:05:01 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+ERROR: compiling _app_views_store_index_html_erb___12332213_29676336 RAISED E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:11: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_store_index_html_erb___12332213_29676336(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "store/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; if notice 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( notice );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+<h1>Your Pragmatic Catalog</h1>
+
+'); @products.each do |product| ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+E:/Ruby193/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__1059082215__process_action__212950138__callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+E:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+E:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+E:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+E:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Rendered store/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+E:/Ruby193/depotProject/depot/app/views/store/index.html.erb:11: syntax error, unexpected $end, expecting keyword_end):
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:06:53 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb___12332213_43186560'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (44.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (61.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:09:03 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb___12332213_43186560'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:09:10 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 95ms (Views: 89.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:09:10 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:09:10 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:09:10 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:10:42 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb___12332213_43186560'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:10:47 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 139ms (Views: 133.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:10:47 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:10:47 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:10:47 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111217201642)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:13:38 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (120.0ms)
+Completed 500 Internal Server Error in 466ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb__484904502_27334704'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:20:56 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb__484904502_28085256'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (40.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:21:48 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb__484904502_30366324'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:21:51 +0000
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered products/index.html.erb within layouts/application (511.0ms)
+Completed 200 OK in 600ms (Views: 594.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:21:51 +0000
+Served asset /scaffold.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:21:52 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:21:52 +0000
+Served asset /defaults.js - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:22:16 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 141ms (Views: 135.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:22:16 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:22:16 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:22:16 +0000
+Served asset /defaults.js - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:22:16 +0000
+Served asset /logo.png - 304 Not Modified (5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:22:19 +0000
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered products/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 156ms (Views: 150.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:22:19 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:22:19 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:22:19 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:22:19 +0000
+Served asset /scaffold.css - 404 Not Found (34ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/products/9/edit" for 127.0.0.1 at 2011-12-26 00:22:28 +0000
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "9"]]
+Rendered products/_form.html.erb (30.0ms)
+Rendered products/edit.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 166ms (Views: 157.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:22:28 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:22:28 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:22:28 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:22:28 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started PUT "/products/9" for 127.0.0.1 at 2011-12-26 00:22:30 +0000
+  Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lg+WB1bIUfqeTuYoiwEiFENiTlCW49M/BA0nqWC4cKc=", "product"=>{"title"=>"Android Development", "description"=>"Android development 4.01", "image_url"=>"/images/ruby.jpg", "price"=>"20.09"}, "commit"=>"Update Product", "id"=>"9"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "9"]]
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'Android Development' AND "products"."id" != 9) LIMIT 1[0m
+Redirected to http://localhost:3000/products/9
+Completed 302 Found in 250ms
+
+
+Started GET "/products/9" for 127.0.0.1 at 2011-12-26 00:22:31 +0000
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "9"]]
+Rendered products/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:22:31 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:22:31 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:22:31 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:22:31 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:22:32 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 142ms (Views: 135.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:22:33 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:22:33 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:22:33 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:22:33 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:23:12 +0000
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered products/index.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 134ms (Views: 129.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:23:12 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:23:12 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:23:12 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:23:12 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:23:15 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: 
+    8: <% @products.each do |product| %>
+    9: 
+    10: 
+    11: 
+  app/views/store/index.html.erb:8:in `_app_views_store_index_html_erb__484904502_17230476'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:23:19 +0000
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered products/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 104ms (Views: 98.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:23:19 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:23:19 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:23:19 +0000
+Served asset /defaults.js - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:23:19 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:24:26 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    4: <% end %>
+    5: 
+    6: <h1>Your Pragmatic Catalog</h1>
+    7: <% @products.each do |product| %>
+    8: <%= image_tag(product.image_url) %>
+    9: <%= product.title %>
+    10: <%= sanitize(product.description) %>
+  app/views/store/index.html.erb:7:in `_app_views_store_index_html_erb__484904502_31007568'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:26:34 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: <p id="notice" ><%= notice %></p>
+    3: <% end %>
+    4: <h1>Your Pragmatic Catalog</h1>
+    5: <% @products.each do |product| %>
+    6: <div class="entry" >
+    7: <%= image_tag(product.image_url) %>
+    8: <h3><%= product.title %></h3>
+  app/views/store/index.html.erb:5:in `_app_views_store_index_html_erb__484904502_28645224'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:26:36 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 134ms (Views: 128.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:26:36 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:26:36 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:26:36 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:26:36 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2011-12-26 00:27:03 +0000
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "6"]]
+Rendered products/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 135ms (Views: 126.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:27:03 +0000
+Served asset /defaults.js - 404 Not Found (18ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:27:03 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:27:03 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:27:03 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:27:05 +0000
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered products/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 139ms (Views: 134.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:27:05 +0000
+Served asset /scaffold.css - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:27:05 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:27:05 +0000
+Served asset /defaults.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:27:06 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-12-26 00:27:08 +0000
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (25.0ms)
+Rendered products/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:27:08 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:27:08 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:27:08 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:27:08 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111217201642)
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-12-26 00:33:03 +0000
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (16.0ms)
+Rendered products/new.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 252ms (Views: 251.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 00:33:09 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 92ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: <p id="notice" ><%= notice %></p>
+    3: <% end %>
+    4: <h1>Your Pragmatic Catalog</h1>
+    5: <% @products.each do |product| %>
+    6: <div class="entry" >
+    7: <%= image_tag(product.image_url) %>
+    8: <h3><%= product.title %></h3>
+  app/views/store/index.html.erb:5:in `_app_views_store_index_html_erb__746800830_42861708'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-12-26 00:34:41 +0000
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered products/index.html.erb within layouts/application (607.0ms)
+Completed 200 OK in 663ms (Views: 656.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 00:34:42 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 00:34:42 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 00:34:42 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 00:34:42 +0000
+Served asset /logo.png - 304 Not Modified (4ms)
