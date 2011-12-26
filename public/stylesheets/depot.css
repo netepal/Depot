@@ -9,7 +9,7 @@
         font: bold smaller sans-serif;
 }
 
-#
+
 #store h1 {
         font:  150% sans-serif;
         color: #226;
@@ -153,3 +153,9 @@
   font-weight: bold;
   margin-right: 2em;
 }
+
+/* START:inline */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+/* END:inline */

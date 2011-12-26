@@ -6585,3 +6585,681 @@ Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatc
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:01:19 +0000
 Served asset /logo.png - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (76.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (68.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (62.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111217201642')
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:09:50 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (484.0ms)
+Completed 200 OK in 1137ms (Views: 752.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:10:01 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:10:01 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:10:01 +0000
+Served asset /defaults.js - 404 Not Found (42ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:10:01 +0000
+Served asset /logo.png - 304 Not Modified (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:10:03 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 93ms (Views: 66.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:10:04 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:10:04 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:10:04 +0000
+Served asset /scaffold.css - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:10:04 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111217201642)
+Migrating to CreateCarts (20111226011052)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111226011052')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("carts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:17:07 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (313.0ms)
+Completed 200 OK in 725ms (Views: 483.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:17:17 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:17:17 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:17:17 +0000
+Served asset /scaffold.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:17:17 +0000
+Served asset /defaults.js - 404 Not Found (28ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:17:17 +0000
+Served asset /logo.png - 304 Not Modified (2ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111217201642)
+Migrating to CreateCarts (20111226011052)
+Migrating to CreateLineItems (20111226011842)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111226011842')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("carts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("line_items")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("products")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:23:38 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (241.0ms)
+Completed 200 OK in 569ms (Views: 374.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:23:46 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 94ms (Views: 67.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:23:46 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:23:46 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:23:46 +0000
+Served asset /defaults.js - 404 Not Found (46ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:23:46 +0000
+Served asset /logo.png - 304 Not Modified (4ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-12-26 01:24:01 +0000
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Rendered carts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:01 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:01 +0000
+Served asset /defaults.js - 404 Not Found (44ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:01 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:01 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/carts/new" for 127.0.0.1 at 2011-12-26 01:24:04 +0000
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (14.0ms)
+Rendered carts/new.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 137ms (Views: 135.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:04 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:04 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:04 +0000
+Served asset /defaults.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:04 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/carts" for 127.0.0.1 at 2011-12-26 01:24:06 +0000
+  Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lg+WB1bIUfqeTuYoiwEiFENiTlCW49M/BA0nqWC4cKc=", "commit"=>"Create Cart"}
+  [1m[35mSQL (130.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Mon, 26 Dec 2011 01:24:06 UTC +00:00], ["updated_at", Mon, 26 Dec 2011 01:24:06 UTC +00:00]]
+Redirected to http://localhost:3000/carts/1
+Completed 302 Found in 211ms
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 01:24:07 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered carts/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 62ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:07 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:07 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:07 +0000
+Served asset /defaults.js - 404 Not Found (37ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:07 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-12-26 01:24:10 +0000
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" 
+Rendered carts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:10 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:11 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:11 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:11 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 01:24:13 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered carts/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:13 +0000
+Served asset /scaffold.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:13 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:13 +0000
+Served asset /defaults.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:14 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:24:22 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 93ms (Views: 66.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:24:22 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:24:22 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:24:22 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:24:22 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:28:18 +0000
+  Processing by StoreController#index as HTML
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (E:/Ruby193/depotProject/depot/app/models/product.rb:16: syntax error, unexpected tIDENTIFIER, expecting '}'
+validates :title, :length => {:minimum => 10}
+         ^):
+  app/controllers/store_controller.rb:3:in `index'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:28:40 +0000
+  Processing by StoreController#index as HTML
+Completed 500 Internal Server Error in 44ms
+
+SyntaxError (E:/Ruby193/depotProject/depot/app/models/product.rb:17: syntax error, unexpected tIDENTIFIER, expecting '}'):
+  app/controllers/store_controller.rb:3:in `index'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:29:27 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 130ms (Views: 94.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:29:27 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:29:27 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:29:27 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:29:27 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:31:08 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 147ms (Views: 75.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:31:08 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:31:08 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:31:08 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:31:08 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:33:17 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 112ms (Views: 72.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:33:17 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:33:17 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:33:17 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:33:17 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:33:32 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 109ms (Views: 72.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:33:32 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:33:33 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:33:33 +0000
+Served asset /defaults.js - 404 Not Found (36ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:33:33 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:33:35 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 119ms (Views: 76.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:33:35 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:33:35 +0000
+Served asset /scaffold.css - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:33:35 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:33:35 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 127ms (Views: 87.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:33:36 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 108ms (Views: 72.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:33:36 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:33:36 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:33:36 +0000
+Served asset /defaults.js - 404 Not Found (49ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:33:36 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:34:39 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 192ms (Views: 144.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:34:39 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:34:39 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:34:39 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:34:39 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 01:35:11 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (65.0ms)
+Compiled depot.css  (1ms)  (pid 4976)
+Completed 200 OK in 281ms (Views: 234.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 01:35:11 +0000
+Served asset /scaffold.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 01:35:11 +0000
+Served asset /depot.css - 200 OK (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 01:35:11 +0000
+Served asset /defaults.js - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 01:35:11 +0000
+Served asset /logo.png - 304 Not Modified (0ms)

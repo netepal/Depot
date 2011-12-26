@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324852488.548804:@value{	I"length:EFi	I"digest;
-F"%7627dc05dc1dd5fa896d33218d8f6973I"source;
-FI"	/* Global styles */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324863311.594642:@value{	I"length:EFis	I"digest;
+F"%8e65af90831a2ffbfc99d92fec49e11fI"source;
+FI"s	/* Global styles */
 
 #store #notice {
         color: #000;
@@ -155,6 +155,12 @@ FI"	/* Global styles */
   font-weight: bold;
   margin-right: 2em;
 }
+
+/* START:inline */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+/* END:inline */
 ;
 FI"_version;
-F"%31d37937c1926e8c76bb037f1817ba0f
+F"%2e96142f7aa7c78abfed0289432586c0
