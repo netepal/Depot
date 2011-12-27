@@ -1,8 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324944133.527227:@value{	I"length:EFiX
-I"digest;
-F"%aa95b6a8dcb572488c19da6109bf5afeI"source;
-FI"X
-/* Global styles */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1324945786.779788:@value{	I"length:EFiŠI"digest;
+F"%4febf94ec8e5566059bb51ab24b86940I"source;
+FI"Š/* Global styles */
 
 #store #notice {
         color: #000;
@@ -164,18 +162,37 @@ FI"X
 }
 /* END:inline */
 
-
+/* START:cartmain */
 /* Styles for the cart in the main page */
+
 #store .cart_title {
-font: 120% bold;
+  font: 120% bold;
 }
+
 #store .item_price, #store .total_line {
-text-align: right;
+  text-align: right;
 }
+
 #store .total_line .total_cell {
-font-weight: bold;
-border-top: 1px solid #595;
+  font-weight: bold;
+  border-top: 1px solid #595;
 }
+/* END:cartmain */
+
+/* START:cartside */
+/* Styles for the cart in the sidebar */
+
+#cart, #cart table {
+  font-size: smaller;
+  color:     white;
+}
+
+#cart table {
+  border-top:    1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+/* END:cartside */
 ;
 FI"_version;
-F"%04bd5d92e3666c28bfba1fe9ed71d0da
+F"%a710da6a6c916d3bf535b6c232e85e56

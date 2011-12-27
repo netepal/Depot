@@ -16,10 +16,18 @@
  <%= image_tag("logo.png") %>
  <%= @page_title || "PROJECT PANEL" %>
  </div>
- <div id="columns" >
- <div id="side" >
+ 
+ 
+ 	<div id="side" >
+<div id="cart"
+<% if @cart.line_items.empty? %>
+style="display: none"
+<% end %>
+>
+<%= render(@cart) %>
+</div> 	
  <a href="http://www...." >Home</a><br />
- <a href="http://www..../faq" >Questions</a><br />
+ <a href="http://www..../projects" >Project</a><br />
  <a href="http://www..../news" >News</a><br />
  <a href="http://www..../contact" >Contact</a><br />
  </div>
