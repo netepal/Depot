@@ -9278,3 +9278,906 @@ Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatc
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:36:07 +0000
 Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/line_items?product_id=9" for 127.0.0.1 at 2011-12-26 23:40:28 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"9"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "9"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cart_id", 3], ["created_at", Mon, 26 Dec 2011 23:40:29 UTC +00:00], ["product_id", 9], ["quantity", 1], ["updated_at", Mon, 26 Dec 2011 23:40:29 UTC +00:00]]
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/carts/3
+Completed 302 Found in 309ms
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2011-12-26 23:40:29 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1[0m
+Rendered carts/show.html.erb within layouts/application (155.0ms)
+Completed 200 OK in 211ms (Views: 200.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:40:29 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:40:29 +0000
+Served asset /scaffold.css - 404 Not Found (36ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:40:29 +0000
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:40:29 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2011-12-26 23:42:45 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1[0m
+Rendered carts/show.html.erb within layouts/application (195.0ms)
+Completed 200 OK in 247ms (Views: 239.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:42:45 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:42:45 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:42:45 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:42:45 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:42:47 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mLineItem Load (0.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 84ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:82:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:43:40 +0000
+
+SyntaxError (E:/Ruby193/depotProject/depot/app/controllers/carts_controller.rb:91: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:44:41 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1[0m
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 67ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 23:44:59 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 1[0m
+Rendered carts/show.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:44:59 +0000
+Served asset /defaults.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:44:59 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:44:59 +0000
+Served asset /scaffold.css - 404 Not Found (31ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:44:59 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/1" for 127.0.0.1 at 2011-12-26 23:45:02 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"1"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 65ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 23:45:10 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 118ms (Views: 77.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:45:10 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:45:10 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:45:11 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:45:11 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/line_items?product_id=9" for 127.0.0.1 at 2011-12-26 23:45:12 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"9"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "9"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cart_id", 3], ["created_at", Mon, 26 Dec 2011 23:45:12 UTC +00:00], ["product_id", 9], ["quantity", 1], ["updated_at", Mon, 26 Dec 2011 23:45:12 UTC +00:00]]
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/carts/3
+Completed 302 Found in 243ms
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2011-12-26 23:45:12 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mProduct Load (40.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+Rendered carts/show.html.erb within layouts/application (185.0ms)
+Completed 200 OK in 237ms (Views: 188.0ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:45:13 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:45:13 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:45:13 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:45:13 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:45:15 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLineItem Load (0.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1[0m
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 67ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:46:29 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 105ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 23:46:36 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 191ms (Views: 123.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:46:36 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:46:36 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:46:36 +0000
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:46:36 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/line_items?product_id=7" for 127.0.0.1 at 2011-12-26 23:46:39 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"7"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "7"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cart_id", 3], ["created_at", Mon, 26 Dec 2011 23:46:39 UTC +00:00], ["product_id", 7], ["quantity", 1], ["updated_at", Mon, 26 Dec 2011 23:46:39 UTC +00:00]]
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/carts/3
+Completed 302 Found in 272ms
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2011-12-26 23:46:39 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 7 ORDER BY title LIMIT 1[0m
+Rendered carts/show.html.erb within layouts/application (125.0ms)
+Completed 200 OK in 206ms (Views: 197.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:46:40 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:46:40 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:46:40 +0000
+Served asset /defaults.js - 404 Not Found (49ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:46:40 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:46:41 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 92ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started DELETE "/carts/3" for 127.0.0.1 at 2011-12-26 23:48:37 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"3"}
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLineItem Load (0.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."line_item_id" = 1[0m
+SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1
+Completed 500 Internal Server Error in 72ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: line_items.line_item_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."line_item_id" = 1):
+  app/controllers/carts_controller.rb:84:in `destroy'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 23:48:41 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 1[0m
+Rendered carts/show.html.erb within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 73ms
+
+ActionView::Template::Error (undefined method `total_price' for #<Cart:0x2e27878>):
+    9: <% end %>
+    10: <tr class="total_line" >
+    11: <td colspan="2" >Total</td>
+    12: <td class="total_cell" ><%= number_to_currency(@cart.total_price) %></td>
+    13: </tr>
+    14: </table>
+    15: <%= button_to 'Empty cart', @cart, :method => :delete,
+  app/views/carts/show.html.erb:12:in `_app_views_carts_show_html_erb___682703516_29611884'
+  app/controllers/carts_controller.rb:23:in `show'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 23:50:45 +0000
+
+SyntaxError (E:/Ruby193/depotProject/depot/app/models/cart.rb:18: syntax error, unexpected $end, expecting keyword_end):
+  app/controllers/carts_controller.rb:1:in `<top (required)>'
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2011-12-26 23:51:56 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 1[0m
+Rendered carts/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 127ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:51:56 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:51:56 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:51:56 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:51:56 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/1" for 127.0.0.1 at 2011-12-26 23:52:25 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"1"}
+  [1m[35mCart Load (2.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 3[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = ?  [["id", 3]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 171ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 23:52:26 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 179ms (Views: 114.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:52:26 +0000
+Served asset /scaffold.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:52:26 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:52:26 +0000
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:52:26 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/line_items?product_id=9" for 127.0.0.1 at 2011-12-26 23:52:29 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"9"}
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Mon, 26 Dec 2011 23:52:29 UTC +00:00], ["updated_at", Mon, 26 Dec 2011 23:52:29 UTC +00:00]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "9"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cart_id", 4], ["created_at", Mon, 26 Dec 2011 23:52:29 UTC +00:00], ["product_id", 9], ["quantity", 1], ["updated_at", Mon, 26 Dec 2011 23:52:29 UTC +00:00]]
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = 4 LIMIT 1[0m
+Redirected to http://localhost:3000/carts/4
+Completed 302 Found in 330ms
+
+
+Started GET "/carts/4" for 127.0.0.1 at 2011-12-26 23:52:29 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 4[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1
+Rendered carts/show.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 188ms (Views: 177.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:52:30 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:52:30 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:52:30 +0000
+Served asset /defaults.js - 404 Not Found (51ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:52:30 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/4" for 127.0.0.1 at 2011-12-26 23:52:31 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"4"}
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 4
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 5]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 4]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 155ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-26 23:52:32 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 113ms (Views: 73.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-26 23:52:32 +0000
+Served asset /defaults.js - 404 Not Found (37ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-26 23:52:32 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-26 23:52:32 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-26 23:52:32 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-27 00:00:56 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 110ms (Views: 74.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:00:56 +0000
+Served asset /scaffold.css - 404 Not Found (50ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:00:56 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:00:56 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:00:56 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/line_items?product_id=9" for 127.0.0.1 at 2011-12-27 00:01:03 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"9"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Tue, 27 Dec 2011 00:01:03 UTC +00:00], ["updated_at", Tue, 27 Dec 2011 00:01:03 UTC +00:00]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "9"]]
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 5], ["created_at", Tue, 27 Dec 2011 00:01:03 UTC +00:00], ["product_id", 9], ["quantity", 1], ["updated_at", Tue, 27 Dec 2011 00:01:03 UTC +00:00]]
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = 5 LIMIT 1
+Redirected to http://localhost:3000/carts/5
+Completed 302 Found in 385ms
+
+
+Started GET "/carts/5" for 127.0.0.1 at 2011-12-27 00:01:03 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 5
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 9 ORDER BY title LIMIT 1[0m
+Rendered carts/show.html.erb within layouts/application (177.0ms)
+Completed 200 OK in 232ms (Views: 224.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:01:04 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:01:04 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:01:04 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:01:04 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/5" for 127.0.0.1 at 2011-12-27 00:01:06 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"5"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 5[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = ?  [["id", 6]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 5]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-27 00:01:06 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 179ms (Views: 73.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:01:06 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:01:06 +0000
+Served asset /depot.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:01:06 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:01:07 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-27 00:02:13 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Compiled depot.css  (1ms)  (pid 4188)
+Completed 200 OK in 206ms (Views: 169.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:02:13 +0000
+Served asset /depot.css - 200 OK (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:02:13 +0000
+Served asset /defaults.js - 404 Not Found (37ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:02:13 +0000
+Served asset /scaffold.css - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:02:13 +0000
+Served asset /logo.png - 304 Not Modified (1ms)
+
+
+Started POST "/line_items?product_id=7" for 127.0.0.1 at 2011-12-27 00:02:19 +0000
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "product_id"=>"7"}
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Tue, 27 Dec 2011 00:02:19 UTC +00:00], ["updated_at", Tue, 27 Dec 2011 00:02:19 UTC +00:00]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "7"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cart_id", 6], ["created_at", Tue, 27 Dec 2011 00:02:19 UTC +00:00], ["product_id", 7], ["quantity", 1], ["updated_at", Tue, 27 Dec 2011 00:02:19 UTC +00:00]]
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = 6 LIMIT 1[0m
+Redirected to http://localhost:3000/carts/6
+Completed 302 Found in 336ms
+
+
+Started GET "/carts/6" for 127.0.0.1 at 2011-12-27 00:02:19 +0000
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 6[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 7 ORDER BY title LIMIT 1
+Rendered carts/show.html.erb within layouts/application (180.0ms)
+Completed 200 OK in 232ms (Views: 223.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:02:20 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:02:20 +0000
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:02:20 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:02:20 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/carts/6" for 127.0.0.1 at 2011-12-27 00:02:22 +0000
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBQeOjqZvWvquzm6PIYaI9Dds2/xsPFiCgHJJTqYxWA=", "id"=>"6"}
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 6
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 7]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 6]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 156ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-27 00:02:23 +0000
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Rendered store/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 180ms (Views: 74.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:02:23 +0000
+Served asset /scaffold.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:02:23 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:02:23 +0000
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:02:23 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-27 00:03:11 +0000
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Rendered store/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 111ms (Views: 74.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2011-12-27 00:03:11 +0000
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2011-12-27 00:03:11 +0000
+Served asset /scaffold.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-27 00:03:11 +0000
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered E:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-12-27 00:03:11 +0000
+Served asset /logo.png - 304 Not Modified (0ms)
